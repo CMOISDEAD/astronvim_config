@@ -1,0 +1,26 @@
+{
+  "react arrow function": {
+    "prefix": "afc",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}} = (${2:props}) => {",
+      "  return (",
+      "    <div>${0:body}</div>",
+      "  )",
+      "};"
+    ],
+    "description": "Creates a React Arrow Function whitout imports Component with ES7 module system"
+  },
+  "react arrow funtcion import": {
+    "prefix": "rafc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = (${2:props}) => {",
+      "  return (",
+      "    <div>${0:body}</div>",
+      "  )",
+      "};"
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system"
+  }
+}
