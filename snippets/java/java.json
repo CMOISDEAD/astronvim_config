@@ -1,0 +1,7 @@
+{
+  "print ln": {
+    "prefix": "sout",
+    "body": ["System.out.println($0);"],
+    "description": "Print to standard out"
+  }
+}

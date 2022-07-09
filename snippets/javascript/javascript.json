@@ -689,5 +689,85 @@
     "prefix": "error",
     "body": ["console.error($1);", "$0"],
     "description": "Log error to the console"
+  },
+  "console assert": {
+    "prefix": "cas",
+    "body": ["console.assert(${1:first}, ${2:second})"],
+    "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  },
+  "console clear": {
+    "prefix": "ccl",
+    "body": ["console.clear()"],
+    "description": "Clears the console"
+  },
+  "console count": {
+    "prefix": "cco",
+    "body": ["console.count(${1:first})"],
+    "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  },
+  "console dir": {
+    "prefix": "cdi",
+    "body": ["console.dir(${1:first})"],
+    "description": "Prints a JavaScript representation of the specified object"
+  },
+  "console error": {
+    "prefix": "cer",
+    "body": ["console.error(${1:first})"],
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "console group": {
+    "prefix": "cgr",
+    "body": ["console.group('${1:first}')"],
+    "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  },
+  "console group end": {
+    "prefix": "cge",
+    "body": ["console.groupEnd()"],
+    "description": "Closes out the corresponding console.group()."
+  },
+  "console log": {
+    "prefix": "clg",
+    "body": ["console.log(${1:first})"],
+    "description": "Displays a message in the console"
+  },
+  "console trace": {
+    "prefix": "ctr",
+    "body": ["console.trace(${1:first})"],
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "console log object": {
+    "prefix": "clo",
+    "body": ["console.log('${1:first}', ${1:first})"],
+    "description": "Logs property with name."
+  },
+  "console log json": {
+    "prefix": "clj",
+    "body": ["console.log('${1:first}', JSON.stringify(${1:first}, null, 2))"],
+    "description": "Logs stringified JSON property with name."
+  },
+  "console time": {
+    "prefix": "ctm",
+    "body": ["console.time('${1:first}')"],
+    "description": "Console time wrapper"
+  },
+  "console time end": {
+    "prefix": "cte",
+    "body": ["console.timeEnd('${1:first}')"],
+    "description": "Console time end wrapper"
+  },
+  "console warn": {
+    "prefix": "cwa",
+    "body": ["console.warn(${1:first})"],
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  },
+  "console info": {
+    "prefix": "cin",
+    "body": ["console.info(${1:first})"],
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  },
+  "console table": {
+    "prefix": "ctl",
+    "body": ["console.table([${1:first}])"],
+    "description": "Logs table to console"
   }
 }

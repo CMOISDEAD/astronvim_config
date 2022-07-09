@@ -104,10 +104,14 @@ local config = {
       -- ["goolord/alpha-nvim"] = { disable = true },
 
       -- You can also add new plugins here as well:
+      -- 
       { "ellisonleao/gruvbox.nvim" },
+      { "yamatsum/nvim-nonicons"},
+      { "sainnhe/everforest" },
+      { "ishan9299/nvim-solarized-lua" },
       { "rebelot/kanagawa.nvim" },
       { "mattn/emmet-vim" },
-      { "kylechui/nvim-surround"},
+      { "tpope/vim-surround"},
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
