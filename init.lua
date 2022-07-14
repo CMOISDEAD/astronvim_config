@@ -54,7 +54,7 @@ local config = {
 		[[⠿⠛⠛⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣯⣟⠷⢷⣿⡿⠋⠀⠀⠀⠀⣵⡀⢠⡿⠋⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
 		[[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢿⣿⣿⠂⠀⠀⠀⠀⠀⢀⣽⣿⣿⣿⣿⣿⣿⣿⣍⠛⠿⣿⣿⣿⣿⣿⣿]],
 	},
-	
+
   -- Default theme configuration
   default_theme = {
     diagnostics_style = { italic = true },
@@ -105,13 +105,19 @@ local config = {
 
       -- You can also add new plugins here as well:
       -- 
+      -- colorschemes
       { "ellisonleao/gruvbox.nvim" },
-      { "yamatsum/nvim-nonicons"},
+      { "kyazdani42/blue-moon" },
+      { "savq/melange" },
       { "sainnhe/everforest" },
       { "ishan9299/nvim-solarized-lua" },
       { "rebelot/kanagawa.nvim" },
+      --
+      { "yamatsum/nvim-nonicons" },
       { "mattn/emmet-vim" },
-      { "tpope/vim-surround"},
+      { "tpope/vim-surround" },
+      { "ThePrimeagen/harpoon" },
+      { "ggandor/lightspeed.nvim" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
@@ -155,6 +161,11 @@ local config = {
     packer = {
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
     },
+    ["telescope"] = function(config) -- fix
+        local telescope =  require("telescope")
+        telescope.load_extension('harpoon')
+        return config
+      end,
   },
 
   -- LuaSnip Options
@@ -179,6 +190,14 @@ local config = {
         ["<leader>"] = {
           -- which-key registration table for normal mode, leader prefix
           -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
+          -- Harpoon config
+          ["H"] = {
+            ["a"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon file"},
+            ["f"] = { "<cmd>Telescope harpoon marks<cr>", "Show Harpoons"},
+            ["n"] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next Harpoon"},
+            ["b"] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev Harpoon"},
+            name = "Harpoon",
+          },
         },
       },
     },
@@ -222,6 +241,12 @@ local config = {
 
     -- Add overrides for LSP server settings, the keys are the name of the server
     ["server-settings"] = {
+      volar = {
+        on_attach = function(client)
+          client.resolved_capabilities.document_formatting = false
+          client.resolved_capabilities.document_range_formatting = false
+        end,
+      },
       -- example for addings schemas to yamlls
       -- yamlls = {
       --   settings = {
