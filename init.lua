@@ -71,13 +71,13 @@ local config = {
     end,
     plugins = { -- enable or disable extra plugin highlighting
       aerial = true,
-      beacon = false,
+      beacon = true,
       bufferline = true,
       dashboard = true,
       highlighturl = true,
       hop = false,
       indent_blankline = true,
-      lightspeed = false,
+      lightspeed = true,
       ["neo-tree"] = true,
       notify = true,
       ["nvim-tree"] = false,
@@ -118,6 +118,7 @@ local config = {
       { "tpope/vim-surround" },
       { "ThePrimeagen/harpoon" },
       { "ggandor/lightspeed.nvim" },
+      { "danilamihailov/beacon.nvim" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
