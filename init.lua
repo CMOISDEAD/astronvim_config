@@ -28,7 +28,8 @@ local config = {
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
-      user_emmet_leader_key = "<C-z>", -- sets ztrl
+      user_emmet_leader_key = "<C-z>", -- sets ctrl-z emmet handler
+      vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } },
     },
   },
 
@@ -80,7 +81,7 @@ local config = {
       rainbow = true,
       symbols_outline = false,
       telescope = true,
-      vimwiki = false,
+      vimwiki = true,
       ["which-key"] = true,
     },
   },
@@ -114,6 +115,7 @@ local config = {
       { "ThePrimeagen/harpoon" },
       { "ggandor/lightspeed.nvim" },
       { "danilamihailov/beacon.nvim" },
+      { "vimwiki/vimwiki" },
       { "NTBBloodbath/rest.nvim",
         config = function ()
           require("rest-nvim").setup({
@@ -160,6 +162,8 @@ local config = {
       config.sources = {
         -- Set a formatter
         null_ls.builtins.formatting.prettierd,
+        -- formatter for java
+        -- null_ls.builtins.formatting.google_java_format,
         -- Set a linter
         -- null_ls.builtins.diagnostics.eslint,
       }
@@ -187,12 +191,8 @@ local config = {
     },
     dashboard = {
       custom_footer = { "A wizard is never late, Camilo. Nor is he early; he arrives precisely when he means to." },
+      preview_command = "cat | lolcat -F 0.3",
     },
-    ["telescope"] = function(config) -- fix
-        local telescope =  require("telescope")
-        telescope.load_extension('harpoon')
-        return config
-    end,
   },
 
   -- LuaSnip Options

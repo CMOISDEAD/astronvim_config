@@ -40,6 +40,13 @@
       {
         "language": "java",
         "path": "./java/java.json"
+      },
+      {
+        "language": [
+          "markdown",
+          "vimwiki"
+        ],
+        "path": "./markdown.json"
       }
     ]
   }
