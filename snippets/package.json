@@ -47,6 +47,10 @@
           "vimwiki"
         ],
         "path": "./markdown.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
       }
     ]
   }

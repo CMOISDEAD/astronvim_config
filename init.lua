@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "gruvbox",
+  colorscheme = "gruvbox-material",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -29,7 +29,11 @@ local config = {
     g = {
       mapleader = " ", -- sets vim.g.mapleader
       user_emmet_leader_key = "<C-z>", -- sets ctrl-z emmet handler
-      vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } },
+      gruvbox_material_background = "hard",
+      gruvbox_material_enable_bold = 1,
+      gruvbox_material_enable_italic = 1,
+      -- vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } },
+      -- vimwiki_folding = 'list',
     },
   },
 
@@ -48,7 +52,7 @@ local config = {
     [[  $$$    Tp._   _,gP   $$   `Tb.  $$    ,dP    $  $...$ $..  $$$   T$b    :$  $       `$   Tb.     :$ T.    ,dP  ]],
     [[  $$$;    "^$$$$$^"   d$$     `T.d$$$$$P^"     $  $"""$ $"", $$$    T$b  d$$bd$b      d$b   "^TbsssP" 'T$bgd$P   ]],
     [[  $$$b.____.dP                                 $ .$. .$.$ss,d$$$b.   T$b.                                        ]],
-    [[.d$$$$$$$$$$P  bug                                                    `T$b. ]],
+    [[.d$$$$$$$$$$P                                                         `T$b. ]],
   },
 
   -- Default theme configuration
@@ -102,13 +106,13 @@ local config = {
       -- You can also add new plugins here as well:
       -- 
       -- colorschemes
-      { "ellisonleao/gruvbox.nvim" },
+      -- { "ellisonleao/gruvbox.nvim" },
+      { "sainnhe/gruvbox-material" },
       { "kyazdani42/blue-moon" },
       { "savq/melange" },
       { "sainnhe/everforest" },
       { "ishan9299/nvim-solarized-lua" },
       { "rebelot/kanagawa.nvim" },
-      --
       { "yamatsum/nvim-nonicons" },
       { "mattn/emmet-vim" },
       { "tpope/vim-surround" },
