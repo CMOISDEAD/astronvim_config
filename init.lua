@@ -113,13 +113,42 @@ local config = {
       { "sainnhe/everforest" },
       { "ishan9299/nvim-solarized-lua" },
       { "rebelot/kanagawa.nvim" },
-      { "yamatsum/nvim-nonicons" },
+      -- { "yamatsum/nvim-nonicons" },
       { "mattn/emmet-vim" },
       { "tpope/vim-surround" },
       { "ThePrimeagen/harpoon" },
       { "ggandor/lightspeed.nvim" },
       { "danilamihailov/beacon.nvim" },
+      { "folke/zen-mode.nvim" },
       { "vimwiki/vimwiki" },
+      { "nvim-neorg/neorg",
+        config = function ()
+          require("neorg").setup({
+            load = {
+              ["core.defaults"] = {},
+              ["core.norg.dirman"] = {
+                config = {
+                  workspaces = {
+                    work = "~/notes/work",
+                    home = "~/notes/home",
+                  }
+                }
+              },
+              ["core.norg.completion"] = {
+                config = {
+                  engine = "nvim-cmp",
+                }
+              },
+              ["core.norg.concealer"] = {},
+              ["core.presenter"] = {
+                config = {
+                  zen_mode = "zen-mode",
+                }
+              },
+            }
+          })
+        end,
+    },
       { "NTBBloodbath/rest.nvim",
         config = function ()
           require("rest-nvim").setup({
@@ -148,6 +177,7 @@ local config = {
           })
         end
       },
+      -- { "shaunsigh/oxocarbon.nvim", run = "./install.sh" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
