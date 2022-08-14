@@ -25,6 +25,7 @@ local config = {
     opt = {
       cursorcolumn = true,
       relativenumber = true, -- sets vim.opt.relativenumber
+      spelllang = "es",
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -120,17 +121,24 @@ local config = {
       { "ggandor/lightspeed.nvim" },
       { "danilamihailov/beacon.nvim" },
       { "folke/zen-mode.nvim" },
+      { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
       -- { "vimwiki/vimwiki" },
       { "nvim-neorg/neorg",
         config = function ()
           require("neorg").setup({
             load = {
               ["core.defaults"] = {},
+              ["core.gtd.base"] = {
+                config = {
+                  workspace = "task",
+                }
+              },
               ["core.norg.dirman"] = {
                 config = {
                   workspaces = {
                     work = "~/notes/work",
                     home = "~/notes/home",
+                    task = "~/notes/task",
                   }
                 }
               },
