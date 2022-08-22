@@ -122,6 +122,16 @@ local config = {
       { "danilamihailov/beacon.nvim" },
       { "folke/zen-mode.nvim" },
       { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
+      { "michaelb/sniprun", run = "bash ./install.sh",
+        config = function ()
+          require("sniprun").setup({
+            display = {
+              "NvimNotify",
+            },
+          })
+        end,
+      },
+      { "mfussenegger/nvim-dap" },
       -- { "vimwiki/vimwiki" },
       { "nvim-neorg/neorg",
         config = function ()
@@ -189,7 +199,6 @@ local config = {
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end
     },
-      -- { "shaunsigh/oxocarbon.nvim", run = "./install.sh" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
@@ -208,6 +217,7 @@ local config = {
       config.sources = {
         -- Set a formatter
         null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.formatting.autopep8,
         -- formatter for java
         -- null_ls.builtins.formatting.google_java_format,
         -- Set a linter
