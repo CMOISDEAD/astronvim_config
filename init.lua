@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "gruvbox-material",
+  colorscheme = "solarized",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
