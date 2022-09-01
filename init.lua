@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "solarized",
+  colorscheme = "gruvbox-material",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -133,40 +133,6 @@ local config = {
       },
       { "mfussenegger/nvim-dap" },
       -- { "vimwiki/vimwiki" },
-      { "nvim-neorg/neorg",
-        config = function ()
-          require("neorg").setup({
-            load = {
-              ["core.defaults"] = {},
-              ["core.gtd.base"] = {
-                config = {
-                  workspace = "task",
-                }
-              },
-              ["core.norg.dirman"] = {
-                config = {
-                  workspaces = {
-                    work = "~/notes/work",
-                    home = "~/notes/home",
-                    task = "~/notes/task",
-                  }
-                }
-              },
-              ["core.norg.completion"] = {
-                config = {
-                  engine = "nvim-cmp",
-                }
-              },
-              ["core.norg.concealer"] = {},
-              ["core.presenter"] = {
-                config = {
-                  zen_mode = "zen-mode",
-                }
-              },
-            }
-          })
-        end,
-    },
     { "NTBBloodbath/rest.nvim",
       config = function ()
         require("rest-nvim").setup({
