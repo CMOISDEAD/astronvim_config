@@ -24,7 +24,7 @@ local config = {
   options = {
     opt = {
       cursorcolumn = true,
-      relativenumber = true, -- sets vim.opt.relativenumber
+      relativenumber = true,
       spelllang = "es",
     },
     g = {
@@ -33,27 +33,30 @@ local config = {
       gruvbox_material_background = "hard",
       gruvbox_material_enable_bold = 1,
       gruvbox_material_enable_italic = 1,
-      -- vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } },
-      -- vimwiki_folding = 'list',
     },
   },
 
   -- Set dashboard header
-  header =  {
-    [[         ___ . .  _                                                                                              ]],
-    [["T$$$P"   |  |_| |_                                                                                              ]],
-    [[ :$$$     |  | | |_                                                                                              ]],
-    [[ :$$$                                                      "T$$$$$$$b.                                           ]],
-    [[ :$$$     .g$$$$$p.   T$$$$b.    T$$$$$bp.                   BUG    "Tb      T$b      T$P   .g$P^^T$$  ,gP^^T$$  ]],
-    [[  $$$    d^"     "^b   $$  "Tb    $$    "Tb    .s^s. :sssp   $$$     :$; T$$P $^b.     $   dP"     `T :$P    `T  ]],
-    [[  :$$   dP         Tb  $$   :$;   $$      Tb  d'   `b $      $$$     :$;  $$  $ `Tp    $  d$           Tbp.      ]],
-    [[  :$$  :$;         :$; $$   :$;   $$      :$; T.   .P $^^    $$$    .dP   $$  $   ^b.  $ :$;            "T$$p.   ]],
-    [[  $$$  :$;         :$; $$...dP    $$      :$;  `^s^' .$.     $$$...dP"    $$  $    `Tp $ :$;     "T$$      "T$b  ]],
-    [[  $$$   Tb.       ,dP  $$"""Tb    $$      dP ""$""$" "$"$^^  $$$""T$b     $$  $      ^b$  T$       T$ ;      $$; ]],
-    [[  $$$    Tp._   _,gP   $$   `Tb.  $$    ,dP    $  $...$ $..  $$$   T$b    :$  $       `$   Tb.     :$ T.    ,dP  ]],
-    [[  $$$;    "^$$$$$^"   d$$     `T.d$$$$$P^"     $  $"""$ $"", $$$    T$b  d$$bd$b      d$b   "^TbsssP" 'T$bgd$P   ]],
-    [[  $$$b.____.dP                                 $ .$. .$.$ss,d$$$b.   T$b.                                        ]],
-    [[.d$$$$$$$$$$P                                                         `T$b. ]],
+  header = {
+    [[  =================     ===============     ===============   ========  ======== ]],
+    [[  \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . // ]],
+    [[  ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .|| ]],
+    [[  || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . || ]],
+    [[  ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .|| ]],
+    [[  || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . || ]],
+    [[  ||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .|| ]],
+    [[  || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . || ]],
+    [[  ||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.|| ]],
+    [[  ||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `|| ]],
+    [[  ||    `'         || ||         `'    || ||    `'         || ||   | \  / |   || ]],
+    [[  ||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   || ]],
+    [[  ||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   || ]],
+    [[  ||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   || ]],
+    [[  ||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   || ]],
+    [[  ||.=='    _-'                                                     `' |  /==.|| ]],
+    [[  =='    _-'                        N E O V I M                         \/   `== ]],
+    [[  \   _-'                                                                `-_   / ]],
+    [[   `''                                                                      ``'  ]],
   },
 
   -- Default theme configuration
@@ -99,114 +102,20 @@ local config = {
 
   -- Configure plugins
   plugins = {
-    -- Add plugins, the packer syntax without the "use"
     init = {
-      -- You can disable default plugins as follows:
-      -- ["goolord/alpha-nvim"] = { disable = true },
-
-      -- You can also add new plugins here as well:
-      -- 
-      -- colorschemes
-      -- { "ellisonleao/gruvbox.nvim" },
       { "sainnhe/gruvbox-material" },
       { "kyazdani42/blue-moon" },
       { "savq/melange" },
       { "sainnhe/everforest" },
       { "ishan9299/nvim-solarized-lua" },
       { "rebelot/kanagawa.nvim" },
-      -- { "yamatsum/nvim-nonicons" },
       { "mattn/emmet-vim" },
       { "tpope/vim-surround" },
       { "ThePrimeagen/harpoon" },
       { "ggandor/lightspeed.nvim" },
       { "danilamihailov/beacon.nvim" },
       { "folke/zen-mode.nvim" },
-      { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
-      { "michaelb/sniprun", run = "bash ./install.sh",
-        config = function ()
-          require("sniprun").setup({
-            display = {
-              "NvimNotify",
-            },
-          })
-        end,
-      },
       { "mfussenegger/nvim-dap" },
-      -- { "vimwiki/vimwiki" },
-      { "nvim-neorg/neorg",
-        config = function ()
-          require("neorg").setup({
-            load = {
-              ["core.defaults"] = {},
-              ["core.gtd.base"] = {
-                config = {
-                  workspace = "task",
-                }
-              },
-              ["core.norg.dirman"] = {
-                config = {
-                  workspaces = {
-                    work = "~/notes/work",
-                    home = "~/notes/home",
-                    task = "~/notes/task",
-                  }
-                }
-              },
-              ["core.norg.completion"] = {
-                config = {
-                  engine = "nvim-cmp",
-                }
-              },
-              ["core.norg.concealer"] = {},
-              ["core.presenter"] = {
-                config = {
-                  zen_mode = "zen-mode",
-                }
-              },
-            }
-          })
-        end,
-    },
-    { "NTBBloodbath/rest.nvim",
-      config = function ()
-        require("rest-nvim").setup({
-          -- Open request results in a horizontal split
-          result_split_horizontal = false,
-          -- Keep the http file buffer above|left when split horizontal|vertical
-          result_split_in_place = false,
-          -- Skip SSL verification, useful for unknown certificates
-          skip_ssl_verification = false,
-          -- Highlight request on run
-          highlight = {
-            enabled = true,
-            timeout = 150,
-          },
-          result = {
-            -- toggle showing URL, HTTP info, headers at top the of result window
-            show_url = true,
-            show_http_info = true,
-            show_headers = true,
-          },
-          -- Jump to request line on run
-          jump_to_request = false,
-          env_file = '.env',
-          custom_dynamic_variables = {},
-          yank_dry_run = true,
-        })
-      end
-    },
-    {
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end
-    },
-      -- { "andweeb/presence.nvim" },
-      -- {
-      --   "ray-x/lsp_signature.nvim",
-      --   event = "BufRead",
-      --   config = function()
-      --     require("lsp_signature").setup()
-      --   end,
-      -- },
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -215,13 +124,18 @@ local config = {
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
-        -- Set a formatter
+        -- frontend
         null_ls.builtins.formatting.prettierd,
-        null_ls.builtins.formatting.autopep8,
-        -- formatter for java
-        -- null_ls.builtins.formatting.google_java_format,
-        -- Set a linter
         -- null_ls.builtins.diagnostics.eslint,
+
+        -- python
+        null_ls.builtins.formatting.autopep8,
+
+        -- lua
+        null_ls.builtins.formatting.stylua,
+
+        -- java
+        -- null_ls.builtins.formatting.google_java_format,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
@@ -245,10 +159,6 @@ local config = {
     packer = {
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
     },
-    dashboard = {
-      custom_footer = { "A wizard is never late, Camilo. Nor is he early; he arrives precisely when he means to." },
-      preview_command = "cat | lolcat -F 0.3",
-    },
   },
 
   -- LuaSnip Options
@@ -271,21 +181,12 @@ local config = {
       n = {
         -- second key is the prefix, <leader> prefixes
         ["<leader>"] = {
-          -- which-key registration table for normal mode, leader prefix
-          -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
-          -- Harpoon config
           ["H"] = {
-            ["a"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon file"},
-            ["f"] = { "<cmd>Telescope harpoon marks<cr>", "Show Harpoons"},
-            ["n"] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next Harpoon"},
-            ["b"] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev Harpoon"},
+            ["a"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon file" },
+            ["f"] = { "<cmd>Telescope harpoon marks<cr>", "Show Harpoons" },
+            ["n"] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next Harpoon" },
+            ["b"] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev Harpoon" },
             name = "Harpoon",
-          },
-          ["r"] = {
-            ["r"] = {"<Plug>RestNvim", "Request" },
-            ["p"] = {"<Plug>RestNvimPreview", "Preview Request" },
-            ["l"] = {"<Plug>RestNvimLast", "Re-run last request" },
-            name = "Rest-http",
           },
         },
       },

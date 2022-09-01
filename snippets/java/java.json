@@ -163,6 +163,11 @@
     "body": "${1:Type}[] ${2:Name} = new ${1}[${3:Size}];",
     "description": "Basic Array Declaration"
   },
+  "ArrayList": {
+    "prefix": "d.al",
+    "body": "ArrayList <${1:Type}> ${2:name} = new ArrayList<${1}>;${0}",
+    "description": "ArrayList Declaration"
+  },
   "Matrix": {
     "prefix": "d.ma",
     "body": "${1:Type}[][] ${2:Name} = new ${1}[${3:Rows}][${4:Cols}];",
@@ -173,9 +178,9 @@
     "body": "HashMap <${1:Key}, ${2:Value}> ${3:name} = new HashMap<${1}, ${2}>();${0}",
     "description": "HashMap Declaration"
   },
-  "ArrayList": {
-    "prefix": "d.al",
-    "body": "ArrayList <${1:Type}> ${2:name} = new ArrayList<${1}>;${0}",
-    "description": "ArrayList Declaration"
+  "Stack": {
+    "prefix": "d.st",
+    "body": "Stack<${1:type}> ${2:name} = new Stack<${1}>();${0}",
+    "description": "Stack Declaration"
   }
 }
