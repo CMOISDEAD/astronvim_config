@@ -116,7 +116,7 @@ local config = {
       { "danilamihailov/beacon.nvim" },
       { "folke/zen-mode.nvim" },
       { "mfussenegger/nvim-dap" },
-      { "nvchad/base46" },
+      -- { "vimwiki/vimwiki" },
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
