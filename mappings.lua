@@ -20,7 +20,7 @@ return {
       end,
       desc = "Disable Format on Save",
     },
-    ["<leader><cr>"] = { '<esc>/<++><cr>"_c4l', desc = "Next Template" },
+    -- ["<leader><cr>"] = { '<esc>/<++><cr>"_c4l', desc = "Next Template" },
     ["<leader>dr"] = {
       function()
         local word = vim.fn.expand "<cword>"
@@ -36,14 +36,12 @@ return {
       silent = true,
       desc = "Goldendict",
     },
-    ["<leader>q"] = { ":Bdelete!<cr>", desc = "Quit Buffer" },
-    ["<leader>w"] = { ":WinShift<cr>", desc = "WinShift" },
-    ["<leader>hl"] = { ":HopLineStart<cr>", desc = "Hop Line Start" },
-    ["<leader>hp"] = { ":HopPattern<cr>", desc = "Hop Pattern" },
-    ["<leader>hw"] = { ":HopWord<cr>", desc = "Hop Word" },
+    ["<leader>c"] = { ":Bdelete!<cr>", desc = "Close buffer" },
+    ["<leader>w"] = { ":w<cr>", desc = "Save file" },
+    ["<leader>W"] = { ":WinShift<cr>", desc = "WinShift" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
     ["<leader>SD"] = { ":!rm -r /home/dat/.local/share/nvim/sessions/*<cr><cr>", desc = "Delete all sessions" },
-    ["<leader>gg"] = {
+    ["<leader>gl"] = {
       function()
         require("toggleterm.terminal").Terminal:new({ cmd = "lazygit", direction = "float", hidden = true }):toggle()
       end,
@@ -93,18 +91,12 @@ return {
     ["N"] = { "Nzzzv" },
     ["J"] = { "mzJ`z" },
     ["<C-w>x"] = { ":WinShift swap<cr>" },
-    ["f"] = { ":HopChar1CurrentLine<cr>", desc = "Hop 1 Char Current Line" },
-    ["F"] = { ":HopChar1<cr>", desc = "Hop 1 Char Whole Buf" },
-    ["<A-c>"] = { ":VCoolor<cr>", desc = "VCoolor" },
-    ["<b"] = false,
-    [">b"] = false,
     ["<leader>h"] = false,
     ["<leader>tp"] = false,
     ["<leader>tl"] = false,
     ["<leader>tu"] = false,
     ["<leader>tt"] = false,
     ["<leader>tn"] = false,
-    ["<leader>c"] = false,
     ["<leader>fh"] = false,
     ["<leader>u"] = false,
     ["<leader>o"] = false,
@@ -258,5 +250,6 @@ return {
     ["."] = ".<c-g>u",
     ["!"] = "!<c-g>u",
     ["?"] = "?<c-g>u",
+    ["jk"] = { "<ESC>", desc = "Escape" },
   },
 }

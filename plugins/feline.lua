@@ -1,5 +1,5 @@
 return {
-  theme = { bg = "#000000", fg = "#cdcecf" },
+  theme = { bg = "#161616", fg = "#ebdbb2" },
   components = {
     inactive = {
       {
@@ -12,7 +12,7 @@ return {
               return " " .. vim.o.filetype .. " "
             end
           end,
-          hl = { bg = "#000000" },
+          hl = { bg = "#161616" },
         },
       },
     },

@@ -4,7 +4,6 @@ return {
       name = "Plugins",
       x = { name = "Debugger" },
       d = { name = "Document" },
-      h = { name = "Hop" },
       n = {
         name = "Notes",
         ["."] = { ":cd ~/Notes<cr>", "Go Notes" },

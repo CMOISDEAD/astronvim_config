@@ -1,6 +1,13 @@
 return {
-  ["goolord/alpha-nvim"] = { disable = true },
-  ["max397574/better-escape.nvim"] = { disable = true },
+  ["goolord/alpha-nvim"] = { disable = false },
+  ["sainnhe/gruvbox-material"] = {},
+  ["savq/melange"] = {},
+  ["rebelot/kanagawa.nvim"] = {},
+  ["mattn/emmet-vim"] = {},
+  ["ggandor/lightspeed.nvim"] = {},
+  ["danilamihailov/beacon.nvim"] = {},
+  ["folke/zen-mode.nvim"] = {},
+  ["max397574/better-escape.nvim"] = { disable = false },
   ["EdenEast/nightfox.nvim"] = {
     config = require "user.plugins.nightfox",
   },
@@ -10,21 +17,11 @@ return {
       require("surround").setup { mappings_style = "surround", map_insert_mode = false }
     end,
   },
-  ["phaazon/hop.nvim"] = {
-    branch = "v1", -- optional but strongly recommended
-    event = "BufRead",
-    config = function()
-      require("hop").setup()
-    end,
-  },
   ["ray-x/lsp_signature.nvim"] = {
     event = "InsertEnter",
     config = function()
       require("lsp_signature").setup {}
     end,
-  },
-  ["KabbAmine/vCoolor.vim"] = {
-    cmd = "VCoolor",
   },
   ["mfussenegger/nvim-dap"] = {
     module = "dap",
@@ -44,9 +41,6 @@ return {
   ["nvim-telescope/telescope-packer.nvim"] = {
     module = "telescope._extensions.packer",
   },
-  ["aserowy/tmux.nvim"] = {
-    module = "tmux",
-  },
   ["nvim-treesitter/playground"] = {
     cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor" },
   },
@@ -59,20 +53,8 @@ return {
   },
   ["ziontee113/syntax-tree-surfer"] = { module = "syntax-tree-surfer" },
   ["nvim-treesitter/nvim-treesitter-textobjects"] = { after = "nvim-treesitter" },
-  ["andymass/vim-matchup"] = {
-    event = "BufRead",
-    config = function()
-      vim.g.matchup_matchparen_offscreen = {}
-    end,
-  },
   ["hrsh7th/cmp-nvim-lua"] = { after = "cmp_luasnip" },
   ["jvgrootveld/telescope-zoxide"] = {
     module = "telescope._extensions.zoxide",
-  },
-  ["mickael-menu/zk-nvim"] = {
-    -- module = { "zk", "zk.commands" },
-    config = function()
-      require "user.plugins.zk"
-    end,
   },
 }

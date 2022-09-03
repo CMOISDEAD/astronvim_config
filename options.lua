@@ -18,13 +18,12 @@ return {
       nbsp = "␣",
       eol = "↲",
     },
-    wrap = true,
+    wrap = false,
     showbreak = "↪ ",
     guifont = "RecMonoCasual NF:h14",
+    -- colorcolumn = true,
   },
   g = {
-    vcoolor_disable_mappings = true,
-    vcoolor_lowercase = true,
     loaded_matchit = true,
     loaded_matchparen = true,
     loaded_logiPat = true,
@@ -34,6 +33,5 @@ return {
     loaded_spellfile_plugin = true,
     loaded_netrw = true,
     loaded_tutor_mode_plugin = true,
-    simple_todo_map_keys = false,
   },
 }
