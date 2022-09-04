@@ -21,7 +21,7 @@ return {
     wrap = false,
     showbreak = "↪ ",
     guifont = "RecMonoCasual NF:h14",
-    -- colorcolumn = true,
+    cursorcolumn = true,
   },
   g = {
     loaded_matchit = true,
@@ -33,5 +33,6 @@ return {
     loaded_spellfile_plugin = true,
     loaded_netrw = true,
     loaded_tutor_mode_plugin = true,
+    user_emmet_leader_key = "<C-z>",
   },
 }

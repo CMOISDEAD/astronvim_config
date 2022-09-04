@@ -1,6 +1,6 @@
 return {
   -- this is a comment
-  ensure_installed = { "cpp", "vim", "lua", "python", "rust", "javascript", "html", "css", "json", "toml" },
+  ensure_installed = { "cpp", "vim", "lua", "python", "rust", "javascript", "html", "css", "json", "toml", "java" },
   matchup = {
     enable = true,
   },

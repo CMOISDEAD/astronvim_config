@@ -14,6 +14,18 @@ end
 
 return {
   n = {
+    ["[d"] = {
+      function()
+        vim.diagnostic.goto_prev()
+      end,
+      desc = "Previous diagnostic",
+    },
+    ["]d"] = {
+      function()
+        vim.diagnostic.goto_next()
+      end,
+      desc = "Next diagnostic",
+    },
     ["<leader>lF"] = {
       function()
         vim.api.nvim_del_augroup_by_name "format_on_save"

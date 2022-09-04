@@ -9,7 +9,13 @@ return function(client, bufnr)
     end
   end, { buffer = bufnr, desc = "Toggle diagnostics" })
 
-  if client.name == "tsserver" or client.name == "jsonls" or client.name == "html" or client.name == "sumneko_lua" then
+  if
+    client.name == "tsserver"
+    or client.name == "jsonls"
+    or client.name == "html"
+    or client.name == "sumneko_lua"
+    or client.name == "volar"
+  then
     client.resolved_capabilities.document_formatting = false
   end
   if client.resolved_capabilities.document_formatting then
