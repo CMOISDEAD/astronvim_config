@@ -1,5 +1,4 @@
 return {
-  ["goolord/alpha-nvim"] = { disable = false },
   ["sainnhe/gruvbox-material"] = {},
   ["savq/melange"] = {},
   ["rebelot/kanagawa.nvim"] = {},
@@ -7,7 +6,25 @@ return {
   ["ggandor/lightspeed.nvim"] = {},
   ["danilamihailov/beacon.nvim"] = {},
   ["folke/zen-mode.nvim"] = {},
-  ["max397574/better-escape.nvim"] = { disable = false },
+  ["mfussenegger/nvim-jdtls"] = {},
+  ["tpope/vim-dadbod"] = {},
+  ["kristijanhusak/vim-dadbod-ui"] = {},
+  ["sindrets/diffview.nvim"] = {
+    -- config = require "user.plugins.diffview",
+  },
+  ["declancm/cinnamon.nvim"] = {
+    disable = true,
+  },
+  -- Color highlighting
+  ["NvChad/nvim-colorizer.lua"] = {
+    disable = true,
+  },
+  ["max397574/better-escape.nvim"] = {
+    disable = false,
+  },
+  ["goolord/alpha-nvim"] = {
+    disable = false,
+  },
   ["EdenEast/nightfox.nvim"] = {
     config = require "user.plugins.nightfox",
   },
@@ -57,5 +74,4 @@ return {
   ["jvgrootveld/telescope-zoxide"] = {
     module = "telescope._extensions.zoxide",
   },
-  ["mfussenegger/nvim-jdtls"] = {},
 }

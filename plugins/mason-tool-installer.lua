@@ -11,13 +11,11 @@ return {
     "css-lsp",
     "emmet-ls",
     --    "jdtls",
-
     -- Formatter
     "prettierd",
     "shfmt",
     "stylua",
     "black",
-
     -- Dap
     "debugpy",
     "cpptools",
